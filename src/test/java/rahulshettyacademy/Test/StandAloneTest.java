@@ -26,7 +26,7 @@ public class StandAloneTest {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		
+		//For triggering jenkins
 		
 		LandingPage landingPage = new LandingPage(driver);
 		landingPage.goTo();
