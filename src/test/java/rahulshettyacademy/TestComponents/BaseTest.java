@@ -37,7 +37,7 @@ public class BaseTest {
 		// the System.getPropety("user.dir") -> will get you the path of your current
 		// project
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")
-				+ "\\src\\main\\java\\rahulshettyacademy\\Resources\\GlobalData.properties");
+				+ "\\src\\main\\java\\rahulshettyacademy\\ResourcesGrid\\GlobalData.properties");
 		prop.load(fis);
 		
 		String browserName = System.getProperty("browser") != null ? System.getProperty("browser") : prop.getProperty("browser");    //can read system level properties, even from maven cmd
@@ -49,11 +49,11 @@ public class BaseTest {
 
 		} else if (browserName.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver",
-					"C:\\Users\\Lindokuhle Makanda\\BrowserDrivers\\geckodriver.exe");
+					"C:\\Users\\Lindokuhle Makanda\\BrowserDriversGrid\\geckodriver.exe");
 			driver = new FirefoxDriver();
 		} else if (browserName.equalsIgnoreCase("edge")) {
 			System.setProperty("webdriver.edge.driver",
-					"C:\\Users\\Lindokuhle Makanda\\BrowserDrivers\\msedgedriver.exe");
+					"C:\\Users\\Lindokuhle Makanda\\BrowserDriversGrid\\msedgedriver.exe");
 			driver = new EdgeDriver();
 
 		}
